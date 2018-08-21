@@ -1,24 +1,43 @@
 {
   "name": "plugins",
-  "version": "1.0.0",
-  "description": "",
+  "version": "1.0.0-alpha",
+  "description": "Plugin package for JNRPE",
   "main": "index.js",
   "directories": {
     "lib": "lib"
   },
   "scripts": {
+    "pretest": "eslint --ignore-path .gitignore .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "nagios",
+    "icinga",
+    "monitoring",
+    "remote",
+    "nrpe",
+    "jnrpe"
+  ],
+  "author": "Massimiliano Ziccardi <massimiliano.ziccardi@gmail.com>",
+  "license": "Apache License, Version 2.0",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ziccardi/jsnrpe_plugins.git"
+  },
   "extensions": {
     "jnrpe:plugin": {
       "_NRPE_CHECK": "./lib/nrpe-check-plugin",
-      "CHECK_TEST": "./lib/check-test-plugin"
+      "CHECK_TEST": "./lib/check-test-plugin",
+      "CHECK_NATIVE": "./lib/check-native"
     }
   },
   "dependencies": {
-    "command-line-args": "^5.0.2"
+    "command-line-args": "^5.0.2",
+    "quote-unquote": "^1.0.0",
+    "split-string": "^6.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.4.0",
+    "eslint-config-strongloop": "^2.1.0"
   }
 }
