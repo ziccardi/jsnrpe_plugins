@@ -1,6 +1,6 @@
 {
-  "name": "plugins",
-  "version": "1.0.0-alpha.0",
+  "name": "jnrpe-plugins",
+  "version": "1.0.0-alpha.1",
   "description": "Plugin package for JNRPE",
   "main": "index.js",
   "directories": {
